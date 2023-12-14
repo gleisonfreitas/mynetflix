@@ -1,0 +1,21 @@
+- HomePage
+
+- Login and Create Profile (User and Authentication)
+    - email
+    - username
+    - password
+    - movies watched
+    - profile edit
+
+- Movies/Series
+    - Thumb
+    - Title
+    - description
+    - category
+    - views count
+    - creation date
+    - chapter
+        - movie
+        - title
+
+- Search Bar
