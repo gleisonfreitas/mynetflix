@@ -21,6 +21,20 @@ class HomeFilms(ListView):
     template_name = "homefilms.html"
     model = Filme
 
+
+class SearchMovie(ListView):
+    template_name = "search.html"
+    model = Filme
+
+    def get_queryset(self):
+        wordSearch = self.request.GET.get('q')
+        if wordSearch:
+            object_list = self.model.objects.filter(title__icontains=wordSearch)
+            return object_list
+        else:
+            return None
+
+
 class DetailFilm(DetailView):
     template_name = "detailfilm.html"
     model = Filme
@@ -34,7 +48,7 @@ class DetailFilm(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(DetailFilm, self).get_context_data(**kwargs)
-        related_movies = Filme.objects.exclude(pk=self.get_object().pk).filter(category=self.get_object().category)[0:5]
+        related_movies = self.model.objects.exclude(pk=self.get_object().pk).filter(category=self.get_object().category)[0:5]
         context["related_movies"] = related_movies
 
         return context
