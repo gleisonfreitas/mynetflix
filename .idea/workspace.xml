@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cddd2ae-19f8-4c31-9610-ff95dd5784db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planejamento.txt" beforeDir="false" afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
-    </list>
+    <list default="true" id="5cddd2ae-19f8-4c31-9610-ff95dd5784db" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +37,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "project__begin",
+    "git-widget-placeholder": "feature/movies",
     "last_opened_file_path": "C:/Users/Gleison/Documents/Programação/Phyton/projects/myNetflix/static/images"
   }
 }]]></component>
