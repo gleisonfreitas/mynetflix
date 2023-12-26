@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Filme
+from .models import Film
 from django.views.generic import TemplateView, ListView, DetailView
 
 # Create your views here.
@@ -19,12 +19,12 @@ class HomePage(TemplateView):
 
 class HomeFilms(ListView):
     template_name = "homefilms.html"
-    model = Filme
+    model = Film
 
 
 class SearchMovie(ListView):
     template_name = "search.html"
-    model = Filme
+    model = Film
 
     def get_queryset(self):
         wordSearch = self.request.GET.get('q')
@@ -37,7 +37,7 @@ class SearchMovie(ListView):
 
 class DetailFilm(DetailView):
     template_name = "detailfilm.html"
-    model = Filme
+    model = Film
 
     def get(self, request, *args, **kwargs):
         film = self.get_object()
