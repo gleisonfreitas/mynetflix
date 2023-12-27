@@ -43,6 +43,9 @@ class DetailFilm(DetailView):
         film = self.get_object()
         film.visualization += 1
         film.save()
+        
+        user = request.user
+        user.movies_watched.add(film)
 
         return super().get(request, *args, *kwargs)
 
