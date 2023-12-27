@@ -43,3 +43,5 @@ class User(AbstractUser):
     movies_watched = models.ManyToManyField("Film")
 
 
+
+

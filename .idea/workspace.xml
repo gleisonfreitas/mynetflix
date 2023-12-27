@@ -6,24 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5cddd2ae-19f8-4c31-9610-ff95dd5784db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/migrations/0002_chapter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/new_context.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/templates/detailfilm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/templates/homefilms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/templates/homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/templates/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/filme/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myNetflix/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myNetflix/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myNetflix/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myNetflix/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/templates/homefilms.html" beforeDir="false" afterPath="$PROJECT_DIR$/film/templates/homefilms.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
