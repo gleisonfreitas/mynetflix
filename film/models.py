@@ -31,17 +31,7 @@ class Chapter(models.Model):
     def __str__(self):
         return self.title
 
-class Chapter(models.Model):
-    film = models.ForeignKey("Film", related_name="chapters", on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
-    video = models.URLField()
-
-    def __str__(self):
-        return self.title
 
 class User(AbstractUser):
     movies_watched = models.ManyToManyField("Film")
-
-
-
 

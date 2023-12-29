@@ -2,6 +2,9 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import User
 from django import forms
 
+class FormHomePage(forms.Form):
+    email = forms.EmailField(label=False)
+
 
 class CreateAccountForm(UserCreationForm):
     email = forms.EmailField()

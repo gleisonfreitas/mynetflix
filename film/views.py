@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
-from .models import Film
-from .forms import CreateAccountForm
+from .models import Film, User
+from .forms import CreateAccountForm, FormHomePage
 from django.views.generic import TemplateView, ListView, DetailView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -9,9 +9,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # def homepage(request):
 #    return render(request, 'homepage.html')
 
-class HomePage(TemplateView):
-
+class HomePage(FormView):
     template_name = "homepage.html"
+    form_class = FormHomePage
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
@@ -19,6 +19,13 @@ class HomePage(TemplateView):
         else:
             return super().get(request, *args, *kwargs)
 
+    def get_success_url(self):
+        email = self.request.POST.get('email')
+        user = User.objects.filter(email=email)
+        if user:
+            return reverse('film:login')
+        else:
+            return reverse('film:createAccount')
 
 
 # def homefilms(request):
