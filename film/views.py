@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Film
 from django.views.generic import TemplateView, ListView, DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
@@ -8,7 +9,15 @@ from django.views.generic import TemplateView, ListView, DetailView
 #    return render(request, 'homepage.html')
 
 class HomePage(TemplateView):
+
     template_name = "homepage.html"
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('film:films')
+        else:
+            return super().get(request, *args, *kwargs)
+
 
 
 # def homefilms(request):
@@ -17,12 +26,12 @@ class HomePage(TemplateView):
 #     context['list_films'] = list_films
 #     return render(request, 'homefilms.html', context)
 
-class HomeFilms(ListView):
+class HomeFilms(LoginRequiredMixin, ListView):
     template_name = "homefilms.html"
     model = Film
 
 
-class SearchMovie(ListView):
+class SearchMovie(LoginRequiredMixin, ListView):
     template_name = "search.html"
     model = Film
 
@@ -35,7 +44,7 @@ class SearchMovie(ListView):
             return None
 
 
-class DetailFilm(DetailView):
+class DetailFilm(LoginRequiredMixin, DetailView):
     template_name = "detailfilm.html"
     model = Film
 
@@ -55,3 +64,10 @@ class DetailFilm(DetailView):
         context["related_movies"] = related_movies
 
         return context
+
+class ProfileEdit(LoginRequiredMixin, TemplateView):
+    template_name = "profileedit.html"
+
+
+class CreateAccount(TemplateView):
+    template_name = "createAccount.html"

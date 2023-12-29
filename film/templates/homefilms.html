@@ -50,7 +50,7 @@ h1 {
                     {{ most_recent_movie.description }}
                 </p>
                 <div class="flex my-4">
-                    <a href="{% url 'film:detailfilm' most_recent_movie.pk %}">
+                    <a href="{% url 'film:detailFilm' most_recent_movie.pk %}">
                         <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
                             <ion-icon name="play" class="text-2xl"></ion-icon>
                             <span class="ml-3 font-medium " >
@@ -74,7 +74,7 @@ h1 {
                        {% for movie in recently_movies_list %}
                         {% if forloop.counter < 5 %}
                           <div class="item h-64 w-1/4 m-4">
-                              <a href="{% url 'film:detailfilm' movie.pk %}">
+                              <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
                           </div>
@@ -88,7 +88,7 @@ h1 {
                           {% for movie in recently_movies_list%}
                             {% if forloop.counter > 5 %}
                               <div class="item h-64 w-1/4 m-4">
-                                  <a href="{% url 'film:detailfilm' movie.pk %}">
+                                  <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
@@ -112,7 +112,7 @@ h1 {
                        {% for movie in top_movies_list %}
                         {% if forloop.counter < 5 %}
                           <div class="item h-64 w-1/4 m-4">
-                              <a href="{% url 'film:detailfilm' movie.pk %}">
+                              <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
                           </div>
@@ -126,7 +126,7 @@ h1 {
                           {% for movie in top_movies_list%}
                             {% if forloop.counter > 5 %}
                               <div class="item h-64 w-1/4 m-4">
-                                  <a href="{% url 'film:detailfilm' movie.pk %}">
+                                  <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
@@ -150,7 +150,7 @@ h1 {
                        {% for movie in request.user.movies_watched.all %}
                         {% if forloop.counter < 5 %}
                           <div class="item h-64 w-1/4 m-4">
-                              <a href="{% url 'film:detailfilm' movie.pk %}">
+                              <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
                           </div>
@@ -164,7 +164,7 @@ h1 {
                           {% for movie in request.user.movies_watched.all %}
                             {% if forloop.counter > 5 %}
                               <div class="item h-64 w-1/4 m-4">
-                                  <a href="{% url 'film:detailfilm' movie.pk %}">
+                                  <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
