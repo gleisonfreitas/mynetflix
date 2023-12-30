@@ -26,12 +26,12 @@ SECRET_KEY = 'django-insecure-dkp!=v^+8$i&_l&dhv^tlf+zvtknwk!#i!8-p9sc40*@=_0ze9
 TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 if TOKEN_CSRF:
     SECRET_KEY = TOKEN_CSRF
-    CSRF_TRUSTED_ORIGINS = ['https://mynetflix-production.up.railway.app/']
+    CSRF_TRUSTED_ORIGINS = ['https://mynetflix-production.up.railway.app']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://mynetflix-production.up.railway.app/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['mynetflix-production.up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
