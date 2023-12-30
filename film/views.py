@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from .models import Film, User
 from .forms import CreateAccountForm, FormHomePage
-from django.views.generic import TemplateView, ListView, DetailView, FormView
+from django.views.generic import TemplateView, ListView, DetailView, FormView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
@@ -73,8 +73,13 @@ class DetailFilm(LoginRequiredMixin, DetailView):
 
         return context
 
-class ProfileEdit(LoginRequiredMixin, TemplateView):
+class ProfileEdit(LoginRequiredMixin, UpdateView):
     template_name = "profileedit.html"
+    model = User
+    fields = ['first_name', 'last_name', 'email', 'username']
+
+    def get_success_url(self):
+        return reverse('film:films')
 
 
 class CreateAccount(FormView):

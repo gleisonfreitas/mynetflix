@@ -7,11 +7,10 @@
     <list default="true" id="5cddd2ae-19f8-4c31-9610-ff95dd5784db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/templates/createAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/film/templates/createAccount.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/film/templates/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/templates/profileedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/film/templates/profileedit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/film/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/dynamic__redirect__users",
+    "git-widget-placeholder": "feature/edit__user",
     "last_opened_file_path": "C:/Users/Gleison/Documents/Programação/Phyton/projects/myNetflix/film/migrations",
     "settings.editor.selected.configurable": "terminal"
   }
