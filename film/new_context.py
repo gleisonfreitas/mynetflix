@@ -11,3 +11,4 @@ def recently_movies_list(request):
 def top_movies_list(request):
     movie_list = Film.objects.all().exclude(visualization=0).order_by('-visualization')[0:8]
     return {'top_movies_list': movie_list}
+

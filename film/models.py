@@ -19,6 +19,7 @@ class Film(models.Model):
     category = models.CharField(max_length=15, choices=LIST_CATEGORY)
     visualization = models.IntegerField(default=0)
     creation_date = models.DateTimeField(default=timezone.now)
+    related_movies = models.ManyToManyField("Film", blank=True)
 
     def __str__(self):
         return self.title
