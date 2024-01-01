@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5cddd2ae-19f8-4c31-9610-ff95dd5784db" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/new_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/new_context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/film/templates/detailfilm.html" beforeDir="false" afterPath="$PROJECT_DIR$/film/templates/detailfilm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/film/templates/homefilms.html" beforeDir="false" afterPath="$PROJECT_DIR$/film/templates/homefilms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/film/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Gleison/Documents/Programação/Phyton/projects/myNetflix",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Gleison/Documents/Programação/Phyton/projects/myNetflix&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gleison\Documents\Programação\Phyton\projects\myNetflix" />

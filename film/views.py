@@ -38,6 +38,9 @@ class HomeFilms(LoginRequiredMixin, ListView):
     template_name = "homefilms.html"
     model = Film
 
+    def open_movie(self):
+        print('clicked')
+
 
 class SearchMovie(LoginRequiredMixin, ListView):
     template_name = "search.html"

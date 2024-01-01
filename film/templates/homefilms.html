@@ -7,7 +7,7 @@ Movies
 
 {% block head %}
 <style>
-    $itemGrow: 1.2;
+   $itemGrow: 1.2;
 $duration: 250ms;
 
 html {
@@ -26,7 +26,53 @@ h1 {
 }
 
 .wrapper {
-  grid-template-columns: repeat(2,100%);
+  display: grid;
+  grid-template-columns: repeat(3,100%);
+  overflow:hidden;
+  scroll-behavior: smooth;
+
+  section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+
+    .item {
+      padding: 0 2px;
+      transition: $duration all;
+
+      &:hover {
+        margin: 0 40px;
+        transform: scale(1.2);
+      }
+
+    }
+
+     #sec1go, #sec1back, #sec2go, #sec2back, #sec3go, #sec3back,
+     #sec4go, #sec4back, #sec5go, #sec5back, #sec6go, #sec6back {
+      position: absolute;
+      color: #fff;
+      text-decoration: none;
+      font-size: 6em;
+      background:rgb(0,0,0);
+      width: 80px;
+      padding: 20px;
+      text-align: center;
+      z-index: 1;
+
+      &:nth-of-type(1) {
+        top:0; bottom:0; left:0;
+        background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+      }
+      &:nth-of-type(2) {
+        top:0; bottom:0; right: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+      }
+
+    }
+
+  }
 }
 
 // Remove the arrow for Mobile
@@ -68,33 +114,33 @@ h1 {
                 <h2 class="text-gray-200 text-2xl font-medium">
                     New movies
                 </h2>
-                <div class="wrapper grid overflow-hidden scroll-smooth">
-                  <section id="section1" class="flex flex-nowrap items-center justify-center space-x-8">
-                    <a href="#section2" class="arrow__btn text-6xl page">‹</a>
-                       {% for movie in recently_movies_list %}
+                <div class="wrapper">
+                  <section id="section1">
+                    <a id="sec1back" href="#section2" class="arrow__btn">‹</a>
+                    {% for movie in recently_movies_list %}
                         {% if forloop.counter < 5 %}
-                          <div class="item h-64 w-1/4 m-4">
+                          <div class="item">
                               <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
                           </div>
                         {% endif %}
-                      {% endfor %}
-                    <a href="#section2" class="arrow__btn text-6xl">›</a>
+                    {% endfor %}
+                    <a id="sec1go" href="#section2" class="arrow__btn">›</a>
                   </section>
                     {% if recently_movies_list|length > 4 %}
-                      <section id="section2" class="flex flex-nowrap items-center justify-center">
-                        <a href="#section1" class="arrow__btn text-6xl">‹</a>
+                      <section id="section2">
+                        <a id="sec2back" href="#section1" class="arrow__btn">‹</a>
                           {% for movie in recently_movies_list %}
                             {% if forloop.counter >= 5 %}
-                              <div class="item h-64 w-1/4 m-4">
+                              <div class="item">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
                             {% endif%}
                           {% endfor %}
-                        <a href="#section1" class="arrow__btn text-6xl">›</a>
+                        <a id="sec2go" href="#section1" class="arrow__btn">›</a>
                       </section>
                     {% endif %}
                 </div>
@@ -106,33 +152,33 @@ h1 {
                 <h2 class="text-gray-200 text-2xl font-medium">
                     Top movies
                 </h2>
-                <div class="wrapper grid overflow-hidden scroll-smooth">
-                  <section id="section3" class="flex flex-nowrap items-center justify-center space-x-8">
-                    <a href="#section4" class="arrow__btn text-6xl page">‹</a>
+                <div class="wrapper">
+                  <section id="section3">
+                    <a id="sec3back" href="#section4" class="arrow__btn">‹</a>
                        {% for movie in top_movies_list %}
                          {% if forloop.counter < 5 %}
-                              <div class="item h-64 w-1/4 m-4">
+                              <div class="item">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
                          {% endif %}
                        {% endfor %}
-                    <a href="#section4" class="arrow__btn text-6xl">›</a>
+                    <a id="sec3go" href="#section4" class="arrow__btn">›</a>
                   </section>
                     {% if top_movies_list|length > 4 %}
-                      <section id="section4" class="flex flex-nowrap items-center justify-center">
-                        <a href="#section3" class="arrow__btn text-6xl">‹</a>
+                      <section id="section4">
+                        <a id="sec4back" href="#section3" class="arrow__btn">‹</a>
                           {% for movie in top_movies_list %}
                             {% if forloop.counter >= 5 %}
-                              <div class="item h-64 w-1/4 m-4">
+                              <div class="item">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
                             {% endif %}
                           {% endfor %}
-                        <a href="#section3" class="arrow__btn text-6xl">›</a>
+                        <a id="sec4go" href="#section3" class="arrow__btn">›</a>
                       </section>
                     {% endif %}
                 </div>
@@ -144,33 +190,33 @@ h1 {
                 <h2 class="text-gray-200 text-2xl font-medium">
                     Watched Movies
                 </h2>
-                <div class="wrapper grid overflow-hidden scroll-smooth">
-                  <section id="section5" class="flex flex-nowrap items-center justify-center space-x-8">
-                    <a href="#section6" class="arrow__btn text-6xl page">‹</a>
+                <div class="wrapper">
+                  <section id="section5">
+                    <a id="sec5back" href="#section6" class="arrow__btn">‹</a>
                        {% for movie in request.user.movies_watched.all %}
                         {% if forloop.counter < 5 %}
-                          <div class="item h-64 w-1/4 m-4">
+                          <div class="item">
                               <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
                           </div>
                         {% endif %}
                       {% endfor %}
-                    <a href="#section6" class="arrow__btn text-6xl">›</a>
+                    <a id="sec5go" href="#section6" class="arrow__btn">›</a>
                   </section>
                     {% if request.user.movies_watched.all|length > 4 %}
-                      <section id="section6" class="flex flex-nowrap items-center justify-center">
-                        <a href="#section5" class="arrow__btn text-6xl">‹</a>
+                      <section id="section6">
+                        <a id="sec6back" href="#section5" class="arrow__btn">‹</a>
                           {% for movie in request.user.movies_watched.all %}
                             {% if forloop.counter >= 5 %}
-                              <div class="item h-64 w-1/4 m-4">
+                              <div class="item">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
                               </div>
                             {% endif%}
                           {% endfor %}
-                        <a href="#section5" class="arrow__btn text-6xl">›</a>
+                        <a id="sec6go" href="#section5" class="arrow__btn">›</a>
                       </section>
                     {% endif %}
                 </div>
