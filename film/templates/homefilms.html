@@ -27,7 +27,7 @@ h1 {
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,100%);
+  grid-template-columns: repeat(4,100%);
   overflow:hidden;
   scroll-behavior: smooth;
 
@@ -35,7 +35,7 @@ h1 {
     width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(4, auto);
     margin: 20px 0;
 
     .item {
@@ -118,7 +118,7 @@ h1 {
                     <a id="sec1back" href="#section2" class="arrow__btn">‹</a>
                     {% for movie in recently_movies_list %}
                         {% if forloop.counter < 5 %}
-                          <div class="item">
+                          <div class="item h-64 w-3/4 m-4">
                               <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
@@ -132,7 +132,7 @@ h1 {
                         <a id="sec2back" href="#section1" class="arrow__btn">‹</a>
                           {% for movie in recently_movies_list %}
                             {% if forloop.counter >= 5 %}
-                              <div class="item">
+                              <div class="item h-64 w-3/4 m-4">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
@@ -156,7 +156,7 @@ h1 {
                     <a id="sec3back" href="#section4" class="arrow__btn">‹</a>
                        {% for movie in top_movies_list %}
                          {% if forloop.counter < 5 %}
-                              <div class="item">
+                              <div class="item h-64 w-3/4 m-4">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
@@ -170,7 +170,7 @@ h1 {
                         <a id="sec4back" href="#section3" class="arrow__btn">‹</a>
                           {% for movie in top_movies_list %}
                             {% if forloop.counter >= 5 %}
-                              <div class="item">
+                              <div class="item h-64 w-3/4 m-4">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
@@ -194,7 +194,7 @@ h1 {
                     <a id="sec5back" href="#section6" class="arrow__btn">‹</a>
                        {% for movie in request.user.movies_watched.all %}
                         {% if forloop.counter < 5 %}
-                          <div class="item">
+                          <div class="item h-64 w-3/4 m-4">
                               <a href="{% url 'film:detailFilm' movie.pk %}">
                                 <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                               </a>
@@ -208,7 +208,7 @@ h1 {
                         <a id="sec6back" href="#section5" class="arrow__btn">‹</a>
                           {% for movie in request.user.movies_watched.all %}
                             {% if forloop.counter >= 5 %}
-                              <div class="item">
+                              <div class="item h-64 w-3/4 m-4">
                                   <a href="{% url 'film:detailFilm' movie.pk %}">
                                     <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
                                   </a>
