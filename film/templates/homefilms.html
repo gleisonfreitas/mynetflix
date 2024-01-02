@@ -183,5 +183,45 @@ h1 {
                 </div>
             </div>
         </section>
+
+        {% if request.user.movies_watched.all|length >= 4 %}
+        <section class='bg-primary_black flex justify-center py-10'>
+            <div class="p-8 w-10/12 relative" >
+                <h2 class="text-gray-200 text-2xl font-medium">
+                    Watched Movies
+                </h2>
+                <div class="wrapper">
+                  <section id="section5">
+                    <a id="sec5back" href="#section6" class="arrow__btn">‹</a>
+                       {% for movie in request.user.movies_watched.all %}
+                        {% if forloop.counter < 5 %}
+                          <div class="item">
+                              <a href="{% url 'film:detailFilm' movie.pk %}">
+                                <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
+                              </a>
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                    <a id="sec5go" href="#section6" class="arrow__btn">›</a>
+                  </section>
+                    {% if request.user.movies_watched.all|length > 4 %}
+                      <section id="section6">
+                        <a id="sec6back" href="#section5" class="arrow__btn">‹</a>
+                          {% for movie in request.user.movies_watched.all %}
+                            {% if forloop.counter >= 5 %}
+                              <div class="item">
+                                  <a href="{% url 'film:detailFilm' movie.pk %}">
+                                    <img src="{{ movie.thumb.url }}" class="rounded-md w-full h-full object-cover">
+                                  </a>
+                              </div>
+                            {% endif%}
+                          {% endfor %}
+                        <a id="sec6go" href="#section5" class="arrow__btn">›</a>
+                      </section>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
     </main>
 {% endblock %}
