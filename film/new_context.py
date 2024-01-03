@@ -12,3 +12,8 @@ def top_movies_list(request):
     movie_list = Film.objects.all().exclude(visualization=0).order_by('-visualization')[0:8]
     return {'top_movies_list': movie_list}
 
+
+def watched_movies_list(request):
+    movie_list = request.user.movies_watched.all().order_by('-id')[0:8]
+    return {'watched_movies_list': movie_list}
+

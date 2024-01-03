@@ -75,6 +75,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'film.new_context.recently_movies_list',
                 'film.new_context.top_movies_list',
+                'film.new_context.watched_movies_list',
             ],
         },
     },
