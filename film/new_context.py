@@ -14,6 +14,9 @@ def top_movies_list(request):
 
 
 def watched_movies_list(request):
+    if not request.user.id:
+        return []
+
     movie_list = request.user.movies_watched.all().order_by('-id')[0:8]
     return {'watched_movies_list': movie_list}
 
